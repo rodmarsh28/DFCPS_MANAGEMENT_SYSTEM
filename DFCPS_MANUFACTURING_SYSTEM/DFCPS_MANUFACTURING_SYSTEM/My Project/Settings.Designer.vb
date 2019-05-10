@@ -113,6 +113,17 @@ Namespace My
                 Me("printerName") = value
             End Set
         End Property
+        
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=localhost;Initial Catalog=DFCPS_MANUFACTURING_DB;User ID=sa;Password="& _ 
+            "passwork")>  _
+        Public ReadOnly Property DFCPS_MANUFACTURING_DBConnectionString() As String
+            Get
+                Return CType(Me("DFCPS_MANUFACTURING_DBConnectionString"),String)
+            End Get
+        End Property
     End Class
 End Namespace
 

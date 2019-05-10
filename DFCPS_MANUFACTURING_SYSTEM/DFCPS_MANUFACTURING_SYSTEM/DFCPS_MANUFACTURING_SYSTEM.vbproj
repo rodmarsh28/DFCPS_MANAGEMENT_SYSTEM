@@ -81,11 +81,16 @@
     <Reference Include="MetroFramework.Fonts">
       <HintPath>..\..\..\..\..\2018\github\DFCPS PRODUCTION\DFCPSPRODUCTION\HOME\dfcpsSackMaterialProduceMonitoring\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
     <Reference Include="System.Deployment" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
@@ -112,10 +117,41 @@
     <Compile Include="Accessable Form\TransactionViewer.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Accounting\Accounting_class.vb" />
     <Compile Include="Accounting\frmAccountingMain.Designer.vb">
       <DependentUpon>frmAccountingMain.vb</DependentUpon>
     </Compile>
     <Compile Include="Accounting\frmAccountingMain.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Accounting\frmCheckVoucher.Designer.vb">
+      <DependentUpon>frmCheckVoucher.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Accounting\frmCheckVoucher.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Accounting\frmPettyCashVoucher.Designer.vb">
+      <DependentUpon>frmPettyCashVoucher.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Accounting\frmPettyCashVoucher.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Accounting\frmRequestForCash.Designer.vb">
+      <DependentUpon>frmRequestForCash.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Accounting\frmRequestForCash.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Accounting\frmRequestForPayment.Designer.vb">
+      <DependentUpon>frmRequestForPayment.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Accounting\frmRequestForPayment.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Accounting\frmTransJournal.Designer.vb">
+      <DependentUpon>frmTransJournal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Accounting\frmTransJournal.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Accounts\frmAccountList.Designer.vb">
@@ -150,7 +186,14 @@
     </Compile>
     <Compile Include="Class\accEntry_class.vb" />
     <Compile Include="Class\Account_Class.vb" />
+    <Compile Include="Class\autocomplete_class.vb" />
     <Compile Include="Class\payable_class.vb" />
+    <Compile Include="frmFindTransaction.Designer.vb">
+      <DependentUpon>frmFindTransaction.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmFindTransaction.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Inventory Forms\AddNewItem.Designer.vb">
       <DependentUpon>AddNewItem.vb</DependentUpon>
     </Compile>
@@ -941,6 +984,21 @@
     <EmbeddedResource Include="Accounting\frmAccountingMain.resx">
       <DependentUpon>frmAccountingMain.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Accounting\frmCheckVoucher.resx">
+      <DependentUpon>frmCheckVoucher.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Accounting\frmPettyCashVoucher.resx">
+      <DependentUpon>frmPettyCashVoucher.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Accounting\frmRequestForCash.resx">
+      <DependentUpon>frmRequestForCash.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Accounting\frmRequestForPayment.resx">
+      <DependentUpon>frmRequestForPayment.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Accounting\frmTransJournal.resx">
+      <DependentUpon>frmTransJournal.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Accounts\frmAccountList.resx">
       <DependentUpon>frmAccountList.vb</DependentUpon>
     </EmbeddedResource>
@@ -964,6 +1022,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmDatabaseSettings.resx">
       <DependentUpon>frmDatabaseSettings.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFindTransaction.resx">
+      <DependentUpon>frmFindTransaction.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain_Form.resx">
       <DependentUpon>frmMain_Form.vb</DependentUpon>
@@ -1405,6 +1466,7 @@
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
     </None>
+    <None Include="My Project\DataSources\DFCPS_MANUFACTURING_DBEntities.datasource" />
     <None Include="My Project\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <CustomToolNamespace>My</CustomToolNamespace>
@@ -1438,6 +1500,9 @@
       <ProductName>Windows Installer 3.1</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\item-list.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

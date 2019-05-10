@@ -40,8 +40,17 @@ Partial Class frmAccountingMain
         Me.PurchaseRequisitionHistoryToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PurchaseOrderHistoryToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PurchaseInvoiceHistoryToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SalesInvoiceHistoryToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PayrollToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PrepareCheckvoucherToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PrepareCashRequisistionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PreparePaymentRequisistionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PrepareToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CashvoucherHistoryToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CashRequisitionHistoryToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PaymentRequisitionHistoryToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CashvoucherRequisitionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.StatusStrip.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -49,7 +58,7 @@ Partial Class frmAccountingMain
         'StatusStrip
         '
         Me.StatusStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripStatusLabel3, Me.lblDate, Me.ToolStripStatusLabel5, Me.ToolStripStatusLabel6, Me.lblTime, Me.ToolStripStatusLabel1, Me.ToolStripStatusLabel7, Me.lblUsername})
-        Me.StatusStrip.Location = New System.Drawing.Point(0, 756)
+        Me.StatusStrip.Location = New System.Drawing.Point(0, 728)
         Me.StatusStrip.Name = "StatusStrip"
         Me.StatusStrip.Size = New System.Drawing.Size(1173, 22)
         Me.StatusStrip.TabIndex = 14
@@ -113,7 +122,7 @@ Partial Class frmAccountingMain
         '
         'FileToolStripMenuItem
         '
-        Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AddEmployeesToolStripMenuItem, Me.WidthrawItemsToolStripMenuItem, Me.PreparePurchaseInvoiceToolStripMenuItem})
+        Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AddEmployeesToolStripMenuItem, Me.WidthrawItemsToolStripMenuItem, Me.PreparePurchaseInvoiceToolStripMenuItem, Me.PrepareCheckvoucherToolStripMenuItem, Me.PrepareCashRequisistionToolStripMenuItem, Me.PreparePaymentRequisistionToolStripMenuItem, Me.PrepareToolStripMenuItem})
         Me.FileToolStripMenuItem.Name = "FileToolStripMenuItem"
         Me.FileToolStripMenuItem.Size = New System.Drawing.Size(37, 20)
         Me.FileToolStripMenuItem.Text = "File"
@@ -121,24 +130,24 @@ Partial Class frmAccountingMain
         'AddEmployeesToolStripMenuItem
         '
         Me.AddEmployeesToolStripMenuItem.Name = "AddEmployeesToolStripMenuItem"
-        Me.AddEmployeesToolStripMenuItem.Size = New System.Drawing.Size(227, 22)
+        Me.AddEmployeesToolStripMenuItem.Size = New System.Drawing.Size(231, 22)
         Me.AddEmployeesToolStripMenuItem.Text = "Prepare Purchase Requisition"
         '
         'WidthrawItemsToolStripMenuItem
         '
         Me.WidthrawItemsToolStripMenuItem.Name = "WidthrawItemsToolStripMenuItem"
-        Me.WidthrawItemsToolStripMenuItem.Size = New System.Drawing.Size(227, 22)
+        Me.WidthrawItemsToolStripMenuItem.Size = New System.Drawing.Size(231, 22)
         Me.WidthrawItemsToolStripMenuItem.Text = "Prepare Purchase Order"
         '
         'PreparePurchaseInvoiceToolStripMenuItem
         '
         Me.PreparePurchaseInvoiceToolStripMenuItem.Name = "PreparePurchaseInvoiceToolStripMenuItem"
-        Me.PreparePurchaseInvoiceToolStripMenuItem.Size = New System.Drawing.Size(227, 22)
+        Me.PreparePurchaseInvoiceToolStripMenuItem.Size = New System.Drawing.Size(231, 22)
         Me.PreparePurchaseInvoiceToolStripMenuItem.Text = "Prepare Purchase Invoice"
         '
         'TransactionToolStripMenuItem
         '
-        Me.TransactionToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PurchaseRequisitionHistoryToolStripMenuItem, Me.PurchaseOrderHistoryToolStripMenuItem, Me.PurchaseInvoiceHistoryToolStripMenuItem})
+        Me.TransactionToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PurchaseRequisitionHistoryToolStripMenuItem, Me.PurchaseOrderHistoryToolStripMenuItem, Me.PurchaseInvoiceHistoryToolStripMenuItem, Me.SalesInvoiceHistoryToolStripMenuItem, Me.CashvoucherHistoryToolStripMenuItem, Me.CashvoucherRequisitionToolStripMenuItem, Me.CashRequisitionHistoryToolStripMenuItem, Me.PaymentRequisitionHistoryToolStripMenuItem})
         Me.TransactionToolStripMenuItem.Name = "TransactionToolStripMenuItem"
         Me.TransactionToolStripMenuItem.Size = New System.Drawing.Size(44, 20)
         Me.TransactionToolStripMenuItem.Text = "View"
@@ -161,6 +170,12 @@ Partial Class frmAccountingMain
         Me.PurchaseInvoiceHistoryToolStripMenuItem.Size = New System.Drawing.Size(225, 22)
         Me.PurchaseInvoiceHistoryToolStripMenuItem.Text = "Purchase Invoice History"
         '
+        'SalesInvoiceHistoryToolStripMenuItem
+        '
+        Me.SalesInvoiceHistoryToolStripMenuItem.Name = "SalesInvoiceHistoryToolStripMenuItem"
+        Me.SalesInvoiceHistoryToolStripMenuItem.Size = New System.Drawing.Size(225, 22)
+        Me.SalesInvoiceHistoryToolStripMenuItem.Text = "Sales Invoice History"
+        '
         'PayrollToolStripMenuItem
         '
         Me.PayrollToolStripMenuItem.Name = "PayrollToolStripMenuItem"
@@ -173,11 +188,59 @@ Partial Class frmAccountingMain
         Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(52, 20)
         Me.AboutToolStripMenuItem.Text = "About"
         '
+        'PrepareCheckvoucherToolStripMenuItem
+        '
+        Me.PrepareCheckvoucherToolStripMenuItem.Name = "PrepareCheckvoucherToolStripMenuItem"
+        Me.PrepareCheckvoucherToolStripMenuItem.Size = New System.Drawing.Size(231, 22)
+        Me.PrepareCheckvoucherToolStripMenuItem.Text = "Prepare Checkvoucher"
+        '
+        'PrepareCashRequisistionToolStripMenuItem
+        '
+        Me.PrepareCashRequisistionToolStripMenuItem.Name = "PrepareCashRequisistionToolStripMenuItem"
+        Me.PrepareCashRequisistionToolStripMenuItem.Size = New System.Drawing.Size(231, 22)
+        Me.PrepareCashRequisistionToolStripMenuItem.Text = "Prepare Cash Requisistion"
+        '
+        'PreparePaymentRequisistionToolStripMenuItem
+        '
+        Me.PreparePaymentRequisistionToolStripMenuItem.Name = "PreparePaymentRequisistionToolStripMenuItem"
+        Me.PreparePaymentRequisistionToolStripMenuItem.Size = New System.Drawing.Size(231, 22)
+        Me.PreparePaymentRequisistionToolStripMenuItem.Text = "Prepare Payment Requisistion"
+        '
+        'PrepareToolStripMenuItem
+        '
+        Me.PrepareToolStripMenuItem.Name = "PrepareToolStripMenuItem"
+        Me.PrepareToolStripMenuItem.Size = New System.Drawing.Size(231, 22)
+        Me.PrepareToolStripMenuItem.Text = "Prepare Cashvoucher"
+        '
+        'CashvoucherHistoryToolStripMenuItem
+        '
+        Me.CashvoucherHistoryToolStripMenuItem.Name = "CashvoucherHistoryToolStripMenuItem"
+        Me.CashvoucherHistoryToolStripMenuItem.Size = New System.Drawing.Size(225, 22)
+        Me.CashvoucherHistoryToolStripMenuItem.Text = "Checkvoucher History"
+        '
+        'CashRequisitionHistoryToolStripMenuItem
+        '
+        Me.CashRequisitionHistoryToolStripMenuItem.Name = "CashRequisitionHistoryToolStripMenuItem"
+        Me.CashRequisitionHistoryToolStripMenuItem.Size = New System.Drawing.Size(225, 22)
+        Me.CashRequisitionHistoryToolStripMenuItem.Text = "Cash Requisition History"
+        '
+        'PaymentRequisitionHistoryToolStripMenuItem
+        '
+        Me.PaymentRequisitionHistoryToolStripMenuItem.Name = "PaymentRequisitionHistoryToolStripMenuItem"
+        Me.PaymentRequisitionHistoryToolStripMenuItem.Size = New System.Drawing.Size(225, 22)
+        Me.PaymentRequisitionHistoryToolStripMenuItem.Text = "Payment Requisition History"
+        '
+        'CashvoucherRequisitionToolStripMenuItem
+        '
+        Me.CashvoucherRequisitionToolStripMenuItem.Name = "CashvoucherRequisitionToolStripMenuItem"
+        Me.CashvoucherRequisitionToolStripMenuItem.Size = New System.Drawing.Size(225, 22)
+        Me.CashvoucherRequisitionToolStripMenuItem.Text = "Cashvoucher Requisition"
+        '
         'frmAccountingMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1173, 778)
+        Me.ClientSize = New System.Drawing.Size(1173, 750)
         Me.Controls.Add(Me.StatusStrip)
         Me.Controls.Add(Me.MenuStrip1)
         Me.IsMdiContainer = True
@@ -213,4 +276,13 @@ Partial Class frmAccountingMain
     Friend WithEvents PurchaseInvoiceHistoryToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents PayrollToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents AboutToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents SalesInvoiceHistoryToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents PrepareCheckvoucherToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents PrepareCashRequisistionToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents PreparePaymentRequisistionToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents PrepareToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents CashvoucherHistoryToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents CashvoucherRequisitionToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents CashRequisitionHistoryToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents PaymentRequisitionHistoryToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 End Class

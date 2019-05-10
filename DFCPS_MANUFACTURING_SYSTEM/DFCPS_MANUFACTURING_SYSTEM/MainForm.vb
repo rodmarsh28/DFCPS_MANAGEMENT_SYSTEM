@@ -65,4 +65,12 @@
     Private Sub MetroButton1_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MetroButton1.Click
         frmAccountingMain.ShowDialog()
     End Sub
+
+    Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
+        If MsgBox("Are you sure ?", MsgBoxStyle.YesNo, "Question") = MsgBoxResult.Yes Then
+            Me.Hide()
+            frmLogin.txtPassword.Text = ""
+            frmLogin.ShowDialog()
+        End If
+    End Sub
 End Class

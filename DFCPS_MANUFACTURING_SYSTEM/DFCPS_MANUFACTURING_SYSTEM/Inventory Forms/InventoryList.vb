@@ -120,6 +120,8 @@ Public Class InventoryList
             Me.Close()
         ElseIf mode = "Receiving" Then
             Me.Close()
+        Else
+            Me.Close()
         End If
     End Sub
 End Class

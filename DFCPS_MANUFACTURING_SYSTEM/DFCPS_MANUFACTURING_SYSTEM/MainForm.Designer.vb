@@ -72,9 +72,9 @@ Partial Class MainForm
         '
         Me.StatusStrip1.BackColor = System.Drawing.Color.FromArgb(CType(CType(33, Byte), Integer), CType(CType(33, Byte), Integer), CType(CType(33, Byte), Integer))
         Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripStatusLabel1, Me.LBLID, Me.ToolStripStatusLabel3, Me.LBLNAME, Me.ToolStripStatusLabel5, Me.LBLPOS})
-        Me.StatusStrip1.Location = New System.Drawing.Point(0, 934)
+        Me.StatusStrip1.Location = New System.Drawing.Point(0, 738)
         Me.StatusStrip1.Name = "StatusStrip1"
-        Me.StatusStrip1.Size = New System.Drawing.Size(1389, 22)
+        Me.StatusStrip1.Size = New System.Drawing.Size(1380, 22)
         Me.StatusStrip1.TabIndex = 1
         Me.StatusStrip1.Text = "StatusStrip1"
         '
@@ -200,7 +200,7 @@ Partial Class MainForm
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ACCOUNTToolStripMenuItem, Me.SYSTEMREPORTSToolStripMenuItem, Me.ABOUTToolStripMenuItem, Me.ABOUTToolStripMenuItem1})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(1389, 29)
+        Me.MenuStrip1.Size = New System.Drawing.Size(1380, 29)
         Me.MenuStrip1.TabIndex = 0
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -213,7 +213,7 @@ Partial Class MainForm
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Left
         Me.Panel1.Location = New System.Drawing.Point(0, 29)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(200, 905)
+        Me.Panel1.Size = New System.Drawing.Size(200, 709)
         Me.Panel1.TabIndex = 18
         '
         'Button2
@@ -265,7 +265,7 @@ Partial Class MainForm
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel2.Location = New System.Drawing.Point(200, 29)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(1189, 88)
+        Me.Panel2.Size = New System.Drawing.Size(1180, 88)
         Me.Panel2.TabIndex = 19
         '
         'Label1
@@ -276,9 +276,9 @@ Partial Class MainForm
         Me.Label1.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.Label1.Location = New System.Drawing.Point(28, 31)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(531, 31)
+        Me.Label1.Size = New System.Drawing.Size(481, 31)
         Me.Label1.TabIndex = 0
-        Me.Label1.Text = "| DFCPS MANUFACTURING SYSTEM |"
+        Me.Label1.Text = "| DFCPS MANAGEMENT SYSTEM |"
         '
         'Panel3
         '
@@ -296,134 +296,146 @@ Partial Class MainForm
         Me.Panel3.Controls.Add(Me.Label4)
         Me.Panel3.Controls.Add(Me.Label3)
         Me.Panel3.Controls.Add(Me.Label2)
-        Me.Panel3.Location = New System.Drawing.Point(0, 0)
+        Me.Panel3.Location = New System.Drawing.Point(0, -196)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(1389, 956)
+        Me.Panel3.Size = New System.Drawing.Size(1380, 956)
         Me.Panel3.TabIndex = 21
         '
         'MetroButton6
         '
-        Me.MetroButton6.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.MetroButton6.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+                    Or System.Windows.Forms.AnchorStyles.Left) _
+                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.MetroButton6.BackgroundImage = CType(resources.GetObject("MetroButton6.BackgroundImage"), System.Drawing.Image)
         Me.MetroButton6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.MetroButton6.Location = New System.Drawing.Point(998, 573)
+        Me.MetroButton6.Location = New System.Drawing.Point(982, 680)
         Me.MetroButton6.Name = "MetroButton6"
-        Me.MetroButton6.Size = New System.Drawing.Size(298, 287)
+        Me.MetroButton6.Size = New System.Drawing.Size(200, 200)
         Me.MetroButton6.TabIndex = 29
         Me.MetroButton6.UseSelectable = True
         '
         'Label7
         '
         Me.Label7.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(992, 523)
+        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Location = New System.Drawing.Point(978, 642)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(323, 35)
+        Me.Label7.Size = New System.Drawing.Size(253, 35)
         Me.Label7.TabIndex = 28
         Me.Label7.Text = "Purchases / Requisition"
         '
         'MetroButton5
         '
-        Me.MetroButton5.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.MetroButton5.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+                    Or System.Windows.Forms.AnchorStyles.Left) _
+                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.MetroButton5.BackgroundImage = CType(resources.GetObject("MetroButton5.BackgroundImage"), System.Drawing.Image)
         Me.MetroButton5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.MetroButton5.Location = New System.Drawing.Point(654, 574)
+        Me.MetroButton5.Location = New System.Drawing.Point(638, 681)
         Me.MetroButton5.Name = "MetroButton5"
-        Me.MetroButton5.Size = New System.Drawing.Size(298, 287)
+        Me.MetroButton5.Size = New System.Drawing.Size(200, 200)
         Me.MetroButton5.TabIndex = 27
         Me.MetroButton5.UseSelectable = True
         '
         'Label6
         '
         Me.Label6.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(760, 523)
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(707, 647)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(92, 31)
+        Me.Label6.Size = New System.Drawing.Size(61, 31)
         Me.Label6.TabIndex = 26
         Me.Label6.Text = "Sales"
         '
         'MetroButton4
         '
-        Me.MetroButton4.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.MetroButton4.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+                    Or System.Windows.Forms.AnchorStyles.Left) _
+                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.MetroButton4.BackgroundImage = CType(resources.GetObject("MetroButton4.BackgroundImage"), System.Drawing.Image)
         Me.MetroButton4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.MetroButton4.Location = New System.Drawing.Point(303, 573)
+        Me.MetroButton4.Location = New System.Drawing.Point(287, 680)
         Me.MetroButton4.Name = "MetroButton4"
-        Me.MetroButton4.Size = New System.Drawing.Size(298, 287)
+        Me.MetroButton4.Size = New System.Drawing.Size(200, 200)
         Me.MetroButton4.TabIndex = 25
         Me.MetroButton4.UseSelectable = True
         '
         'Label5
         '
         Me.Label5.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(325, 523)
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(296, 646)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(261, 31)
+        Me.Label5.Size = New System.Drawing.Size(191, 31)
         Me.Label5.TabIndex = 24
         Me.Label5.Text = "Production System"
         '
         'MetroButton3
         '
-        Me.MetroButton3.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.MetroButton3.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+                    Or System.Windows.Forms.AnchorStyles.Left) _
+                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.MetroButton3.BackgroundImage = CType(resources.GetObject("MetroButton3.BackgroundImage"), System.Drawing.Image)
         Me.MetroButton3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.MetroButton3.Location = New System.Drawing.Point(998, 204)
+        Me.MetroButton3.Location = New System.Drawing.Point(980, 423)
         Me.MetroButton3.Name = "MetroButton3"
-        Me.MetroButton3.Size = New System.Drawing.Size(298, 287)
+        Me.MetroButton3.Size = New System.Drawing.Size(200, 200)
         Me.MetroButton3.TabIndex = 23
         Me.MetroButton3.UseSelectable = True
         '
         'MetroButton2
         '
-        Me.MetroButton2.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.MetroButton2.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+                    Or System.Windows.Forms.AnchorStyles.Left) _
+                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.MetroButton2.BackgroundImage = CType(resources.GetObject("MetroButton2.BackgroundImage"), System.Drawing.Image)
         Me.MetroButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.MetroButton2.Location = New System.Drawing.Point(654, 204)
+        Me.MetroButton2.Location = New System.Drawing.Point(636, 423)
         Me.MetroButton2.Name = "MetroButton2"
-        Me.MetroButton2.Size = New System.Drawing.Size(298, 287)
+        Me.MetroButton2.Size = New System.Drawing.Size(200, 200)
         Me.MetroButton2.TabIndex = 22
         Me.MetroButton2.UseSelectable = True
         '
         'MetroButton1
         '
-        Me.MetroButton1.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.MetroButton1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+                    Or System.Windows.Forms.AnchorStyles.Left) _
+                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.MetroButton1.BackgroundImage = CType(resources.GetObject("MetroButton1.BackgroundImage"), System.Drawing.Image)
         Me.MetroButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.MetroButton1.Location = New System.Drawing.Point(302, 204)
+        Me.MetroButton1.Location = New System.Drawing.Point(284, 423)
         Me.MetroButton1.Name = "MetroButton1"
-        Me.MetroButton1.Size = New System.Drawing.Size(298, 287)
+        Me.MetroButton1.Size = New System.Drawing.Size(200, 200)
         Me.MetroButton1.TabIndex = 21
         Me.MetroButton1.UseSelectable = True
         '
         'Label4
         '
         Me.Label4.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(990, 146)
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(983, 389)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(316, 31)
+        Me.Label4.Size = New System.Drawing.Size(246, 31)
         Me.Label4.TabIndex = 20
         Me.Label4.Text = "HR Information System"
         '
         'Label3
         '
         Me.Label3.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(684, 146)
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(665, 389)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(241, 31)
+        Me.Label3.Size = New System.Drawing.Size(171, 31)
         Me.Label3.TabIndex = 19
         Me.Label3.Text = "Inventory System"
         '
         'Label2
         '
         Me.Label2.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(376, 146)
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(327, 379)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(163, 41)
+        Me.Label2.Size = New System.Drawing.Size(105, 41)
         Me.Label2.TabIndex = 18
         Me.Label2.Text = "Accounting"
         '
@@ -431,7 +443,7 @@ Partial Class MainForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1389, 956)
+        Me.ClientSize = New System.Drawing.Size(1380, 760)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.MenuStrip1)

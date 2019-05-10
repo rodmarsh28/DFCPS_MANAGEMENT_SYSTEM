@@ -26,13 +26,11 @@ Public Class frmPurchases
                 .Connection = conn
                 If lblFormMode.Text = "PURCHASE ORDER" Then
                     .CommandText = "SELECT purchaseOrderNo from tblPurchaseOrder order by purchaseOrderNo DESC"
-                ElseIf lblFormMode.Text = "PURCHASE RECEIVING" Then
-                    .CommandText = "SELECT purchaseInvoiceNo from tblPurchaseInvoice order by purchaseInvoiceNo DESC"
                 End If
             End With
             OleDBDR = OleDBC.ExecuteReader
             If OleDBDR.Read Then
-                StrID = OleDBDR.Item(0)
+                StrID = OleDBDR.Item(0).Substring(OleDBDR.Item(0).Length - 5)
                 transNo.Text = "PO-" & Format(Val(StrID) + 1, "00000")
 
             Else

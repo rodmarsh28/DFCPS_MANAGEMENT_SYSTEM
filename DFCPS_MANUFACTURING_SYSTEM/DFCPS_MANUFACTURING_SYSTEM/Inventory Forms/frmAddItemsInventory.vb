@@ -94,7 +94,7 @@
             ElseIf btnAdd.Text = "Add Item" Then
                 inventoryClass.command = "Add"
             End If
-            inventoryClass.refNo = txtItemno.Text
+            inventoryClass.refNo = "BALANCE"
             inventoryClass.itemNo = txtItemno.Text
             inventoryClass.itemdesc = txtItemdesc.Text
             inventoryClass.unitCost = txtUnitCost.Text

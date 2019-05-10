@@ -88,6 +88,8 @@
             sysSettings.settingsName = frmReceivePayments.Text & "_DepositACC"
             sysSettings.settingsValue = frmReceivePayments.txtDepositAcc.Text
             sysSettings.insert_update_settingsVariable()
+        Else
+            Me.Close()
         End If
         successClick = True
         Me.Close()

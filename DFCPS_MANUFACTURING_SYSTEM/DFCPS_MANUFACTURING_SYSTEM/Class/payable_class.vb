@@ -7,7 +7,7 @@ Public Class payable_class
     Public totAmount As Double
     Public paymentType As String
     Public dueDate As DateTime
-    Public paymentDesc As String
+    Public payment As String
     Public status As String
     Public Sub insert_update_payables()
         Try
@@ -18,9 +18,8 @@ Public Class payable_class
                 .Parameters.AddWithValue("@command", SqlDbType.Int).Value = command
                 .Parameters.AddWithValue("@refno", SqlDbType.VarChar).Value = transNo
                 .Parameters.AddWithValue("@SRC", SqlDbType.VarChar).Value = Form.ActiveForm.Text
-                .Parameters.AddWithValue("@paymenttype", SqlDbType.Decimal).Value = paymentType
+                .Parameters.AddWithValue("@payment", SqlDbType.VarChar).Value = payment
                 .Parameters.AddWithValue("@duedate", SqlDbType.VarChar).Value = dueDate
-                .Parameters.AddWithValue("@paymentdesc", SqlDbType.VarChar).Value = paymentDesc
                 .Parameters.AddWithValue("@amount", SqlDbType.Decimal).Value = totAmount
                 .Parameters.AddWithValue("@status", SqlDbType.VarChar).Value = status
             End With

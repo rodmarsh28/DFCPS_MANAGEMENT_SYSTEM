@@ -7,6 +7,18 @@ Public Class Account_Class
     Public subheader As String
     Public dept As String
     Public accDesc As String
+
+    Public AccName As String
+    Public itemdesc As String
+    Public unit As String
+    Public unitprice As Double
+    Public qty As Integer
+    Public inventorable As Boolean
+    Public buyable As Boolean
+    Public sellable As Boolean
+    Public costAcc As String
+    Public incomeAcc As String
+    Public assetAcc As String
     Public Sub get_accountInfo()
         Try
             checkConn()
@@ -33,6 +45,54 @@ Public Class Account_Class
             MsgBox(ex.Message)
         Finally
 
+        End Try
+    End Sub
+    Public Sub get_itemAccountInfo()
+        Try
+            checkConn()
+            Dim cmd As New SqlCommand("select itemdesc,unit,unitprice,buyable,sellable,inventorable,costofsalesAcc,incomeAcc,assetAcc from tblInvtry where itemno = '" & searchValue & "'", conn)
+            Dim dr As SqlDataReader = cmd.ExecuteReader
+            If dr.Read Then
+                itemdesc = dr.Item(0)
+                unit = dr.Item(1)
+                unitprice = dr.Item(2)
+                qty = 1
+                If dr.Item(3) = 1 Then
+                    buyable = True
+                Else
+                    buyable = False
+                End If
+                If dr.Item(4) = 1 Then
+                    sellable = True
+                Else
+                    sellable = False
+                End If
+                If dr.Item(5) = 1 Then
+                    inventorable = True
+                Else
+                    inventorable = False
+                End If
+                costAcc = dr.Item(6)
+                incomeAcc = dr.Item(7)
+                assetAcc = dr.Item(8)
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        Finally
+
+        End Try
+    End Sub
+    Public Sub getaccountName()
+        Try
+            checkConn()
+            Dim cmd As New SqlCommand("select accountName from tblCOA where accNo = '" & searchValue & "'", conn)
+            Dim dr As SqlDataReader = cmd.ExecuteReader
+            If dr.Read Then
+                accName = dr.Item(0)
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        Finally
         End Try
     End Sub
 End Class

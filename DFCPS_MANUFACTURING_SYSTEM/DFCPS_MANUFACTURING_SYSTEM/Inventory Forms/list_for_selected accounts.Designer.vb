@@ -34,7 +34,7 @@ Partial Class list_for_selected_accounts
         Me.LV.Location = New System.Drawing.Point(0, 0)
         Me.LV.MultiSelect = False
         Me.LV.Name = "LV"
-        Me.LV.Size = New System.Drawing.Size(329, 203)
+        Me.LV.Size = New System.Drawing.Size(554, 203)
         Me.LV.TabIndex = 16
         Me.LV.UseCompatibleStateImageBehavior = False
         Me.LV.View = System.Windows.Forms.View.Details
@@ -43,7 +43,7 @@ Partial Class list_for_selected_accounts
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(329, 203)
+        Me.ClientSize = New System.Drawing.Size(554, 203)
         Me.Controls.Add(Me.LV)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.KeyPreview = True

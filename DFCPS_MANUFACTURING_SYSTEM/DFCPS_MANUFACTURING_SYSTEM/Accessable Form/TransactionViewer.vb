@@ -64,8 +64,11 @@ Public Class TransactionViewer
         Dim dt As New DataTable
         Try
             checkConn()
-            Dim cmd As New SqlCommand("select distinct convert(varchar,[transDate],111) as Date,purchaseOrderNo AS PurchaseOrder_No from tblPurchaseOrder where purchaseOrderNo like '%" & txtSearch.Text & "%'", conn)
-
+            Dim cmd As New SqlCommand("get_PurchaseOrder_list", conn)
+            With cmd
+                .CommandType = CommandType.StoredProcedure
+                .Parameters.AddWithValue("@searchValue", SqlDbType.VarChar).Value = txtSearch.Text
+            End With
             Dim da As New SqlDataAdapter(cmd)
             da.SelectCommand = cmd
             dt.Rows.Clear()
