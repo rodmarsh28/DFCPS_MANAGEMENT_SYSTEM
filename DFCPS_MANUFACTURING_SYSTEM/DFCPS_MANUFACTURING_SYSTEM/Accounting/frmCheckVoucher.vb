@@ -1,5 +1,6 @@
 ﻿Public Class frmCheckVoucher
     Dim nl As Integer = 0
+    Dim bankId As String = "1"
     Dim particulars As String
     Dim partamount As Double
     Dim accEntryId As String
@@ -10,6 +11,7 @@
     Public totDebit As Double = 0.0
     Public totCredit As Double = 0.0
     Dim No As String = ""
+    Dim command As Integer
 
 
   
@@ -41,34 +43,44 @@
         End Try
     End Sub
 
-
     Sub save()
         If MsgBox("ARE YOU SURE YOU WANT TO CREATE AND SAVE CASH / CHECK VOUCHER ?", MsgBoxStyle.Question + MsgBoxStyle.YesNo, "WARNING") = MsgBoxResult.Yes Then
+            Try
+                Dim ac As New Accounting_class
+                ac.command = command
+                ac.transNo = txtCVNo.Text
+                ac.refNo = txtReqNo.Text
+                ac.transDate = dtpDate.Value
+                ac.tinNo = txtTIN.Text
+                ac.payee = txtPayee.Text
+                ac.address = txtAddress.Text
+                ac.bankid = bankId
+                ac.checkNo = txtCheckNo.Text
+                ac.totAmount = lblTotAmount.Text
+                ac.totDebit = lblDebit.Text
+                ac.totCredit = lblCredit.Text
+                ac.amountinWords = txtAmountinWords.Text
+                ac.status = "Pending for Approval"
+                ac.insert_update_checkvoucher()
+                saveAccEntry()
+
+                MsgBox("TRANSACTION COMPLETED !", MsgBoxStyle.Information, "SUCCESS")
+            Catch ex As Exception
+                MsgBox(ex.Message)
+            End Try
         End If
     End Sub
 
     Sub saveAccEntry()
-
-        Try
-            If conn.State = ConnectionState.Open Then
-                OleDBC.Dispose()
-                conn.Close()
-            End If
-            If conn.State <> ConnectionState.Open Then
-                ConnectDatabase()
-            End If
-            With OleDBC
-                .Connection = conn
-                .CommandText = "INSERT INTO tblAccountEntry VALUES('" & txtCVNo.Text & _
-                    "','" & accno & _
-                    "','" & debit & _
-                    "','" & credit & "')"
-
-                .ExecuteNonQuery()
-            End With
-        Catch ex As Exception
-            MsgBox(ex.Message)
-        End Try
+        Dim ac As New accEntry_class
+        For Each row As DataGridViewRow In dgv.Rows
+            ac.refno = txtCVNo.Text
+            ac.account = row.Cells(0).Value
+            ac.memo = txtMemo.Text
+            ac.debit = row.Cells(2).Value
+            ac.credit = row.Cells(3).Value
+            ac.insert_Acc_entry_class()
+        Next
     End Sub
   
     Sub printCheque()
@@ -112,7 +124,12 @@
     End Sub
 
     Private Sub btnSave_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnSave.Click
-        If lblTotAmount.Text = lblDebit.Text And lblCredit.Text Then
+        If btnSave.Text = "Record" Then
+            command = 0
+        ElseIf btnSave.Text = "Update" Then
+            command = 1
+        End If
+        If lblTotAmount.Text = lblDebit.Text And lblCredit.Text = lblDebit.Text Then
             save()
         Else
             MsgBox("THE AMOUNT YOU INPUT IS NOT BALANCED, PLEASE CHECK AND TRY AGAIN", MsgBoxStyle.Critical, "ERROR")
@@ -147,8 +164,30 @@
 
     End Sub
 
+    Private Sub dgv_CellMouseDoubleClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellMouseEventArgs) Handles dgv.CellMouseDoubleClick
+        Try
+            If dgv.CurrentCell.ColumnIndex = 2 Then
+                Dim dbt As Decimal = InputBox("Debit Value")
+                dgv.CurrentRow.Cells(2).Value = Format(dbt, "N")
+           
+            ElseIf dgv.CurrentCell.ColumnIndex = 3 Then
+                Dim cdt As Decimal = InputBox("Credit Value")
+                dgv.CurrentRow.Cells(3).Value = Format(cdt, "N")
+            End If
+        Catch ex As Exception
+        End Try
+    End Sub
+
     Private Sub dgv_CellValueChanged(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles dgv.CellValueChanged
         getAccName()
+        Dim cdt As Decimal
+        Dim dbt As Decimal
+        For Each row As DataGridViewRow In dgv.Rows
+            dbt += row.Cells(2).Value
+            cdt += row.Cells(3).Value
+        Next
+        lblDebit.Text = Format(dbt, "N")
+        lblCredit.Text = Format(cdt, "N")
     End Sub
 
     Private Sub txtAmount_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtAmount.KeyPress

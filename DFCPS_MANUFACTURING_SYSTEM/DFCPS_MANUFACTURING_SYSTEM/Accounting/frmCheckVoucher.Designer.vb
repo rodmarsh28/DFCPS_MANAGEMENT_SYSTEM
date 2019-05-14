@@ -62,6 +62,8 @@ Partial Class frmCheckVoucher
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.txtAmount = New System.Windows.Forms.TextBox()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.txtMemo = New System.Windows.Forms.TextBox()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         CType(Me.dgv, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -210,7 +212,7 @@ Partial Class frmCheckVoucher
         Me.GroupBox2.Controls.Add(Me.Label13)
         Me.GroupBox2.Controls.Add(Me.Label12)
         Me.GroupBox2.Controls.Add(Me.Label11)
-        Me.GroupBox2.Location = New System.Drawing.Point(33, 403)
+        Me.GroupBox2.Location = New System.Drawing.Point(33, 417)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(567, 106)
         Me.GroupBox2.TabIndex = 103
@@ -298,7 +300,7 @@ Partial Class frmCheckVoucher
         'GroupBox3
         '
         Me.GroupBox3.Controls.Add(Me.dgv)
-        Me.GroupBox3.Location = New System.Drawing.Point(30, 237)
+        Me.GroupBox3.Location = New System.Drawing.Point(30, 251)
         Me.GroupBox3.Name = "GroupBox3"
         Me.GroupBox3.Size = New System.Drawing.Size(573, 160)
         Me.GroupBox3.TabIndex = 22
@@ -360,7 +362,7 @@ Partial Class frmCheckVoucher
         '
         'btnSave
         '
-        Me.btnSave.Location = New System.Drawing.Point(197, 527)
+        Me.btnSave.Location = New System.Drawing.Point(197, 541)
         Me.btnSave.Name = "btnSave"
         Me.btnSave.Size = New System.Drawing.Size(112, 39)
         Me.btnSave.TabIndex = 11
@@ -369,7 +371,7 @@ Partial Class frmCheckVoucher
         '
         'Cancel
         '
-        Me.Cancel.Location = New System.Drawing.Point(315, 527)
+        Me.Cancel.Location = New System.Drawing.Point(315, 541)
         Me.Cancel.Name = "Cancel"
         Me.Cancel.Size = New System.Drawing.Size(112, 39)
         Me.Cancel.TabIndex = 12
@@ -378,7 +380,7 @@ Partial Class frmCheckVoucher
         '
         'Button5
         '
-        Me.Button5.Location = New System.Drawing.Point(532, 224)
+        Me.Button5.Location = New System.Drawing.Point(532, 238)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(33, 23)
         Me.Button5.TabIndex = 10
@@ -407,7 +409,7 @@ Partial Class frmCheckVoucher
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(571, 224)
+        Me.Button2.Location = New System.Drawing.Point(571, 238)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(33, 23)
         Me.Button2.TabIndex = 112
@@ -442,12 +444,31 @@ Partial Class frmCheckVoucher
         Me.txtAmount.Size = New System.Drawing.Size(359, 20)
         Me.txtAmount.TabIndex = 116
         '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.Location = New System.Drawing.Point(31, 239)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(44, 13)
+        Me.Label9.TabIndex = 117
+        Me.Label9.Text = "MEMO"
+        '
+        'txtMemo
+        '
+        Me.txtMemo.Location = New System.Drawing.Point(81, 235)
+        Me.txtMemo.Name = "txtMemo"
+        Me.txtMemo.Size = New System.Drawing.Size(433, 20)
+        Me.txtMemo.TabIndex = 1
+        '
         'frmCheckVoucher
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(622, 594)
+        Me.Controls.Add(Me.txtMemo)
+        Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.txtAmount)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Button1)
@@ -522,4 +543,6 @@ Partial Class frmCheckVoucher
     Friend WithEvents Column3 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Label8 As System.Windows.Forms.Label
     Friend WithEvents txtAmount As System.Windows.Forms.TextBox
+    Friend WithEvents Label9 As System.Windows.Forms.Label
+    Friend WithEvents txtMemo As System.Windows.Forms.TextBox
 End Class

@@ -116,7 +116,7 @@ Public Class frmPurchasedReceiving
     Sub account_entry()
         Dim ac As New accEntry_class
         For Each row As DataGridViewRow In dgv.Rows
-            ac.refno = txtRefNo.Text
+            ac.refno = txtInvoice.Text
             ac.account = row.Cells(6).Value
             ac.memo = txtMemo.Text
             ac.debit = row.Cells(5).Value
@@ -127,7 +127,7 @@ Public Class frmPurchasedReceiving
     Sub account_credit_entry()
         Dim ac As New accEntry_class
         For Each row As DataGridViewRow In dgvAccEntry.Rows
-            ac.refno = txtRefNo.Text
+            ac.refno = txtInvoice.Text
             ac.account = row.Cells(0).Value
             ac.memo = txtMemo.Text
             ac.debit = 0

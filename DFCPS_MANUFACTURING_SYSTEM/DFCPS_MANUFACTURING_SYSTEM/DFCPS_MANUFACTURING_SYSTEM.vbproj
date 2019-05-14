@@ -166,6 +166,18 @@
     <Compile Include="Accounts\frmManageAccounts.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Bank\formBankSelection.Designer.vb">
+      <DependentUpon>formBankSelection.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Bank\formBankSelection.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bank\frmManageBank.Designer.vb">
+      <DependentUpon>frmManageBank.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Bank\frmManageBank.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Card Forms\CardList.Designer.vb">
       <DependentUpon>CardList.vb</DependentUpon>
     </Compile>
@@ -192,6 +204,12 @@
       <DependentUpon>frmFindTransaction.vb</DependentUpon>
     </Compile>
     <Compile Include="frmFindTransaction.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bank\frmManageCheckbook.Designer.vb">
+      <DependentUpon>frmManageCheckbook.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Bank\frmManageCheckbook.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Inventory Forms\AddNewItem.Designer.vb">
@@ -1005,6 +1023,12 @@
     <EmbeddedResource Include="Accounts\frmManageAccounts.resx">
       <DependentUpon>frmManageAccounts.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Bank\formBankSelection.resx">
+      <DependentUpon>formBankSelection.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bank\frmManageBank.resx">
+      <DependentUpon>frmManageBank.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Card Forms\CardList.resx">
       <DependentUpon>CardList.vb</DependentUpon>
     </EmbeddedResource>
@@ -1028,6 +1052,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain_Form.resx">
       <DependentUpon>frmMain_Form.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bank\frmManageCheckbook.resx">
+      <DependentUpon>frmManageCheckbook.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HR Information System\frmLoading.resx">
       <DependentUpon>frmLoading.vb</DependentUpon>
