@@ -10,7 +10,7 @@ Public Class Accounting_class
     Public tinNo As String
     Public payee As String
     Public address As String
-    Public bankid As String
+    Public checkbookid As String
     Public checkNo As String
     Public totAmount As Double
     Public totDebit As Double
@@ -29,7 +29,7 @@ Public Class Accounting_class
             .Parameters.AddWithValue("@tinNo", SqlDbType.Decimal).Value = tinNo
             .Parameters.AddWithValue("@payee", SqlDbType.VarChar).Value = payee
             .Parameters.AddWithValue("@address", SqlDbType.Decimal).Value = address
-            .Parameters.AddWithValue("@bankID", SqlDbType.VarChar).Value = bankid
+            .Parameters.AddWithValue("@bankID", SqlDbType.VarChar).Value = checkbookid
             .Parameters.AddWithValue("@checkNo", SqlDbType.VarChar).Value = checkNo
             .Parameters.AddWithValue("@totalAmount", SqlDbType.VarChar).Value = totAmount
             .Parameters.AddWithValue("@totalDebit", SqlDbType.VarChar).Value = totDebit

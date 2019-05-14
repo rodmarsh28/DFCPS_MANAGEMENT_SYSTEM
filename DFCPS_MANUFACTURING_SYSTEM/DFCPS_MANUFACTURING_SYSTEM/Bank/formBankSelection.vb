@@ -11,8 +11,6 @@ Public Class formBankSelection
             Dim dt As New DataTable
             dt.Rows.Clear()
             da.Fill(dt)
-            dgv.Rows.Clear()
-            dgv.Columns.Clear()
             dgv.DataSource = dt
             dgv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells
             dgv.AutoResizeColumns()
@@ -32,8 +30,6 @@ Public Class formBankSelection
             Dim dt As New DataTable
             dt.Rows.Clear()
             da.Fill(dt)
-            dgv.Rows.Clear()
-            dgv.Columns.Clear()
             dgv.DataSource = dt
             dgv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells
             dgv.AutoResizeColumns()
@@ -48,7 +44,6 @@ Public Class formBankSelection
     End Sub
 
     Private Sub formBankSelection_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        get_bankList()
     End Sub
 
 

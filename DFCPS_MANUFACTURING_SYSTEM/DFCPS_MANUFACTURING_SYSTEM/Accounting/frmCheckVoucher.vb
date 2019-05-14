@@ -1,6 +1,6 @@
 ﻿Public Class frmCheckVoucher
     Dim nl As Integer = 0
-    Dim bankId As String = "1"
+    Dim checkbookID As String
     Dim particulars As String
     Dim partamount As Double
     Dim accEntryId As String
@@ -54,7 +54,7 @@
                 ac.tinNo = txtTIN.Text
                 ac.payee = txtPayee.Text
                 ac.address = txtAddress.Text
-                ac.bankid = bankId
+                ac.checkbookid = checkbookID
                 ac.checkNo = txtCheckNo.Text
                 ac.totAmount = lblTotAmount.Text
                 ac.totDebit = lblDebit.Text
@@ -208,5 +208,16 @@
 
     Private Sub lblTotAmount_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles lblTotAmount.Click
 
+    End Sub
+
+    Private Sub Button1_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+        formBankSelection.get_CheckbookList()
+        formBankSelection.ShowDialog()
+        If formBankSelection.itemClicked = True Then
+            checkbookID = formBankSelection.dgv.CurrentRow.Cells(0).Value
+            txtBankName.Text = formBankSelection.dgv.CurrentRow.Cells(1).Value
+            formBankSelection.itemClicked = False
+        End If
+   
     End Sub
 End Class
