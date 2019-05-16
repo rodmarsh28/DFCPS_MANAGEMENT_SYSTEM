@@ -17,7 +17,7 @@ Public Class payable_class
                 .CommandType = CommandType.StoredProcedure
                 .Parameters.AddWithValue("@command", SqlDbType.Int).Value = command
                 .Parameters.AddWithValue("@refno", SqlDbType.VarChar).Value = transNo
-                .Parameters.AddWithValue("@SRC", SqlDbType.VarChar).Value = Form.ActiveForm.Text
+                .Parameters.AddWithValue("@SRC", SqlDbType.VarChar).Value = src
                 .Parameters.AddWithValue("@payment", SqlDbType.VarChar).Value = payment
                 .Parameters.AddWithValue("@duedate", SqlDbType.VarChar).Value = dueDate
                 .Parameters.AddWithValue("@amount", SqlDbType.Decimal).Value = totAmount

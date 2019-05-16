@@ -15,4 +15,8 @@
     Private Sub PrepareToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PrepareToolStripMenuItem.Click
         frmPettyCashVoucher.ShowDialog()
     End Sub
+
+    Private Sub PaymentRequisitionHistoryToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PaymentRequisitionHistoryToolStripMenuItem.Click
+
+    End Sub
 End Class

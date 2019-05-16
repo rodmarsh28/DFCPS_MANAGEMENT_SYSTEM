@@ -212,12 +212,12 @@
 
     Private Sub Button1_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
         formBankSelection.get_CheckbookList()
+        formBankSelection.mode = "checkbookList"
         formBankSelection.ShowDialog()
         If formBankSelection.itemClicked = True Then
             checkbookID = formBankSelection.dgv.CurrentRow.Cells(0).Value
-            txtBankName.Text = formBankSelection.dgv.CurrentRow.Cells(1).Value
+            txtBankName.Text = formBankSelection.dgv.CurrentRow.Cells(2).Value
             formBankSelection.itemClicked = False
         End If
-   
     End Sub
 End Class

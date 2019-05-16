@@ -22,6 +22,7 @@ Partial Class frmManageBank
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.txtBal = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
@@ -42,8 +43,14 @@ Partial Class frmManageBank
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.UPDATEToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.INACTIVEToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ActiveBankToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.GroupBox1.SuspendLayout()
         CType(Me.dgv, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.ContextMenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'GroupBox1
@@ -197,13 +204,13 @@ Partial Class frmManageBank
         Me.dgv.AllowUserToResizeRows = False
         Me.dgv.BackgroundColor = System.Drawing.Color.White
         Me.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgv.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column4, Me.Column1, Me.Column2, Me.Column3})
+        Me.dgv.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column4, Me.Column1, Me.Column2, Me.Column3, Me.Column5})
         Me.dgv.Location = New System.Drawing.Point(255, 19)
         Me.dgv.MultiSelect = False
         Me.dgv.Name = "dgv"
         Me.dgv.ReadOnly = True
         Me.dgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgv.Size = New System.Drawing.Size(673, 433)
+        Me.dgv.Size = New System.Drawing.Size(710, 433)
         Me.dgv.TabIndex = 5
         '
         'Column4
@@ -234,12 +241,42 @@ Partial Class frmManageBank
         Me.Column3.ReadOnly = True
         Me.Column3.Width = 120
         '
+        'Column5
+        '
+        Me.Column5.HeaderText = "Status"
+        Me.Column5.Name = "Column5"
+        Me.Column5.ReadOnly = True
+        '
+        'ContextMenuStrip1
+        '
+        Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.UPDATEToolStripMenuItem, Me.INACTIVEToolStripMenuItem, Me.ActiveBankToolStripMenuItem})
+        Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(153, 92)
+        '
+        'UPDATEToolStripMenuItem
+        '
+        Me.UPDATEToolStripMenuItem.Name = "UPDATEToolStripMenuItem"
+        Me.UPDATEToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.UPDATEToolStripMenuItem.Text = "Update"
+        '
+        'INACTIVEToolStripMenuItem
+        '
+        Me.INACTIVEToolStripMenuItem.Name = "INACTIVEToolStripMenuItem"
+        Me.INACTIVEToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.INACTIVEToolStripMenuItem.Text = "Inactive Bank"
+        '
+        'ActiveBankToolStripMenuItem
+        '
+        Me.ActiveBankToolStripMenuItem.Name = "ActiveBankToolStripMenuItem"
+        Me.ActiveBankToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ActiveBankToolStripMenuItem.Text = "Active Bank"
+        '
         'frmManageBank
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(940, 474)
+        Me.ClientSize = New System.Drawing.Size(977, 474)
         Me.Controls.Add(Me.dgv)
         Me.Controls.Add(Me.GroupBox1)
         Me.Name = "frmManageBank"
@@ -248,6 +285,7 @@ Partial Class frmManageBank
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         CType(Me.dgv, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.ContextMenuStrip1.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -267,8 +305,13 @@ Partial Class frmManageBank
     Friend WithEvents Button3 As System.Windows.Forms.Button
     Friend WithEvents txtAccAsset As System.Windows.Forms.TextBox
     Friend WithEvents Label4 As System.Windows.Forms.Label
+    Friend WithEvents ContextMenuStrip1 As System.Windows.Forms.ContextMenuStrip
+    Friend WithEvents UPDATEToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents Column4 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Column1 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Column2 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Column3 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Column5 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents INACTIVEToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ActiveBankToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 End Class

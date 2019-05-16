@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class formBankSelection
+Partial Class frmAR_AP
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -22,10 +22,17 @@ Partial Class formBankSelection
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.dgv = New System.Windows.Forms.DataGridView()
         Me.txtSearch = New System.Windows.Forms.TextBox()
+        Me.dgv = New System.Windows.Forms.DataGridView()
         CType(Me.dgv, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'txtSearch
+        '
+        Me.txtSearch.Location = New System.Drawing.Point(2, 2)
+        Me.txtSearch.Name = "txtSearch"
+        Me.txtSearch.Size = New System.Drawing.Size(1057, 20)
+        Me.txtSearch.TabIndex = 3
         '
         'dgv
         '
@@ -33,39 +40,31 @@ Partial Class formBankSelection
         Me.dgv.AllowUserToDeleteRows = False
         Me.dgv.BackgroundColor = System.Drawing.Color.White
         Me.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgv.Location = New System.Drawing.Point(0, 28)
+        Me.dgv.Location = New System.Drawing.Point(2, 23)
         Me.dgv.MultiSelect = False
         Me.dgv.Name = "dgv"
         Me.dgv.ReadOnly = True
         Me.dgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgv.Size = New System.Drawing.Size(673, 267)
-        Me.dgv.TabIndex = 0
+        Me.dgv.Size = New System.Drawing.Size(1057, 479)
+        Me.dgv.TabIndex = 2
         '
-        'txtSearch
-        '
-        Me.txtSearch.Location = New System.Drawing.Point(0, 4)
-        Me.txtSearch.Name = "txtSearch"
-        Me.txtSearch.Size = New System.Drawing.Size(673, 20)
-        Me.txtSearch.TabIndex = 1
-        '
-        'formBankSelection
+        'frmAR_AP
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(673, 295)
+        Me.ClientSize = New System.Drawing.Size(1060, 502)
         Me.Controls.Add(Me.txtSearch)
         Me.Controls.Add(Me.dgv)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
-        Me.Name = "formBankSelection"
-        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Select One Items"
+        Me.Name = "frmAR_AP"
+        Me.Text = "frmAR_AP"
         CType(Me.dgv, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents dgv As System.Windows.Forms.DataGridView
     Friend WithEvents txtSearch As System.Windows.Forms.TextBox
+    Friend WithEvents dgv As System.Windows.Forms.DataGridView
 End Class

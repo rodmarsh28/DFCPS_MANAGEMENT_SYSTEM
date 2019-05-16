@@ -118,10 +118,22 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Accounting\Accounting_class.vb" />
+    <Compile Include="Accounting\ar_pr_settings.Designer.vb">
+      <DependentUpon>ar_pr_settings.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Accounting\ar_pr_settings.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Accounting\frmAccountingMain.Designer.vb">
       <DependentUpon>frmAccountingMain.vb</DependentUpon>
     </Compile>
     <Compile Include="Accounting\frmAccountingMain.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Accounting\frmAR_AP.Designer.vb">
+      <DependentUpon>frmAR_AP.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Accounting\frmAR_AP.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Accounting\frmCheckVoucher.Designer.vb">
@@ -1000,8 +1012,14 @@
     <EmbeddedResource Include="Accessable Form\TransactionViewer.resx">
       <DependentUpon>TransactionViewer.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Accounting\ar_pr_settings.resx">
+      <DependentUpon>ar_pr_settings.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Accounting\frmAccountingMain.resx">
       <DependentUpon>frmAccountingMain.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Accounting\frmAR_AP.resx">
+      <DependentUpon>frmAR_AP.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\frmCheckVoucher.resx">
       <DependentUpon>frmCheckVoucher.vb</DependentUpon>
